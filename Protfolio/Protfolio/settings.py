@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-c@gv!lmj7-=d&qx)4lr5jj@xky+#tj-eny0+=pc-e#_+_-6nx7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -68,26 +68,16 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Protfolio.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'content',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': 'FEROZKHAN',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-            'Trusted_Connection': 'yes',
-        },
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -107,6 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+WSGI_APPLICATION = 'Protfolio.wsgi.application'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
@@ -123,8 +114,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR/'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_ROOT='/media/'
 MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
 

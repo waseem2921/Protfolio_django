@@ -3,7 +3,6 @@ from django.shortcuts import redirect, render
 from .models import Category, Item,ContactMessage,Achievement
 from django.core.mail import send_mail
 from django.http import HttpResponse
-import imageio
 from django.conf import settings
 # Create your views here.
 def home(request):
