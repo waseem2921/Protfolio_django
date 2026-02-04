@@ -91,7 +91,7 @@
 </head>
 <body>
 <section id="achievements">
-  <h1 class="section-title">Achievements & Certifications</h1>
+  <h1 class="section-title">Achievements,Events & Certifications</h1>
 
   <div class="achievements-grid">
     {% for a in achievements %}
@@ -105,14 +105,18 @@
         {% endif %}
 
         {% if a.video_url %}
+          <a href="{{ video_url }}" target="_blank" rel="noopener noreferrer">
+    ▶ Watch Video
+</a>
           <div class="video-wrapper">
-            <iframe src="{{ a.video_url }}" allowfullscreen></iframe>
+            <iframe src="{{ a.video_url }}" frameborder="0" allowfullscreen></iframe>
           </div>
         {% endif %}
 
       </div>
     {% endfor %}
   </div>
+  <h3> and Many More...</h3>
 </section>
 <footer>
 	<p style="background-color: #000; color: #fff; padding: 10px; text-align: center;">Copyright © 2026 Waseem Feroz Khan B. All Rights Reserved.</p>
