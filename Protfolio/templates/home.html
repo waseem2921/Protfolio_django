@@ -19,14 +19,14 @@
 	<!--navigation-------------------------------->
 	<nav>
 	<!--logo-->
-	<a href="#" class="logo">LOGO</a>
+	<a href="#" class="logo">Portfolio</a>
 	<div class="toggle"></div>
 	<ul class="menu">
 	<li class="active"><a href="#main" >Home</a></li>	
 	<li><a href="#about">About</a></li>	
 	<li><a href="#skills">Skills</a></li>	
-	<li><a href="#services">Services</a></li>	
-	<li><a href="#portfolio" style="text-align:center;display:block;">Portfolio</a></li>		
+	<li><a href="#services">Projects</a></li>	
+	<li><a href="#experience" style="text-align:center;display:block;">Experience</a></li>		
 	<li><a href="#contact-form">Contact</a></li>	
 	</ul>
 	<!--language-->
@@ -211,7 +211,8 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 	<!--text-->
 	<div class="s-b-text">
 	<a href="#">Building an enterprise-scale, end-to-end data platform involving data ingestion, transformation, validation, role-based access, and reporting workflows.</a>	
-	</div>
+    <a href="{% url 'category_detail' 'enterprise-projects' %}" class="cv-btn">Know More!</a>	
+</div>
 	</div>
 		<!--box-2-->
 	<div class="s-box">
@@ -225,7 +226,8 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 	<!--text-->
 	<div class="s-b-text">
 	<a href="#">Developing a health analytics system with structured data ingestion, preprocessing, and transformation pipelines to support reliable risk assessment.</a>
-	</div>
+     <a href="{% url 'category_detail' 'health-projects' %}" class="cv-btn">Know More!</a>	
+</div>
 	</div>
 	<!--box-3-->
 	<div class="s-box">
@@ -239,7 +241,8 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 	<!--text-->
 	<div class="s-b-text">
 	<a href="#">Designing a custom DBMS to understand data storage, schema design, query execution, and performance optimization.</a>
-	</div>
+     <a href="{% url 'category_detail' 'dbms-projects' %}" class="cv-btn">Know More!</a>	
+</div>
 	</div>
 	</section>
 	<!--portfolio-->
@@ -254,7 +257,7 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 	<div class="overlay-text">
 	<h1>Power BI</h1>
 	<p>Analytics Projects</p>	
-	<a href="#skills" class="cv-btn">Know More!</a>
+	<a href="{% url 'category_detail' 'power-bi-projects' %}" class="cv-btn">Know More!</a>
 	</div>
 		
 	</div>
@@ -264,7 +267,7 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 	<div class="overlay-text">
 	<h1>Data Engineering</h1>
 	<p>Projects</p>	
-	<a href="#skills" class="cv-btn">Know More!</a>
+	<a href="{% url 'category_detail' 'data-engineering-projects' %}" class="cv-btn">Know More!</a>
 	</div>
 	</div>
 	<!--portfolio-box-3-->
@@ -273,7 +276,7 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 	<div class="overlay-text">
 	<h1>Web Applications</h1>
 	<p>Client Projects</p>	
-	<a href="#skills" class="cv-btn">Know More!</a>
+	<a href="{% url 'category_detail' 'web-applications-projects' %}" class="cv-btn">Know More!</a>
 	</div>
 	</div>
 	<!--portfolio-box-4-------->
@@ -282,7 +285,7 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 	<div class="overlay-text">
 	<h1>SQL</h1>
 	<p>Projects</p>	
-	<a href="#skills" class="cv-btn">Know More!</a>
+	<a href="{% url 'category_detail' 'sql-projects' %}" class="cv-btn">Know More!</a>
 	</div>
 	</div>
 	<!--portfolio-box-5-->
@@ -291,7 +294,7 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 	<div class="overlay-text">
 	<h1>Others</h1>
 	<p>Projects</p>	
-	<a href="#skills" class="cv-btn">Know More!</a>
+	<a href="{% url 'category_detail' 'others-projects' %}" class="cv-btn">Know More!</a>
 	</div>
 	</div>
 		</section>
@@ -301,41 +304,36 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 			<div class="experience-container">
 				<div class="experience-item">
 					<h2>Data Analyst</h2>
-					<h3 href="https://www.microcare.io/solution/2">Microcare Academy</h3>
+					<a href="https://www.microcare.io/solution/2"><h3>Microcare Academy</h3></a>
 					<span class="exp-duration">Jul 2025 - Present</span>
 					<p>Worked as a Data Analyst Intern with a Saudi-based organization, contributing to data analysis and reporting for real-world use cases.</p>
 				</div>
 				<div class="experience-item">
 					<h2>Software Developer Intern</h2>
-					<h3 href="https://www.linkedin.com/company/segmentop/about/">SegmenTop</h3>
+					<a href="https://www.linkedin.com/company/segmentop/about/"><h3>SegmenTop</h3></a>
 					<span class="exp-duration">Mar 2024 - Jun 2024</span>
 					<p>Worked as a Software Developer Intern at a Canada-based company, contributing to backend development and handling international client requirements.</p>
 				</div>
 			</div>
 		</section>
+		
 		<!--Contact-btn-->
 		<section id="contact-btn">
 	<!--heading-------------->
-	<h1 class="c-b-heading">If You Have Any Project In Your Mind ?</h1>
+	<h1 class="c-b-heading" style="color:#000000;">Certifications , Achievements and Events</h1>
 	<!--btn-------->
-		<button >Contact Me</button>
+		<a href="{% url 'achievements' %}"><button class="cv-btn">Know More</button></a>
 	</section>
 	<!--contact-form-->
 	<section id="contact-form">
 	<form>
 	<!--left---------->
 	<div class="contact-left">
-	<h1 class="c-l-heading"><font style="border-bottom: 3px solid #1ED98B;">Writ</font>e us</h1>
+	<h1 class="c-l-heading"><font style="border-bottom: 3px solid #1ED98B;">Contac</font>t us</h1>
 	<!--name-------->
-	<div class="f-name">
-	<font >Name</font>
-	<input type="text" placeholder="Full Name"/>
-	</div>
-	<!--email-------->
-	<div class="f-email">
-	<font >Email</font>
-	<input type="email" placeholder="Example@gmail.com"/>
-	</div>
+	 <h4 color='#fff'>Gmail : waseemferozkhan2921@gmail.com</h4>
+	   <h4 color='#fff'> LinkedIn : <a href="https://www.linkedin.com/in/waseem-feroz-khan-b-203203260" color='#fff'>Waseem Feroz Khan B</a></h4>
+	   <h4 color='#fff'> Phone : +91 7032309169 </h4>
 	</div>
 	<!--right-------------->
 	<div class="contact-right">
@@ -351,6 +349,10 @@ I am seeking an opportunity where I can grow as an engineer while contributing t
 	</form>
 	
 	</section>
+
+	<footer>
+	<p style="background-color: #000; color: #fff; padding: 10px; text-align: center;">Copyright © 2026 Waseem Feroz Khan B. All Rights Reserved.</p>
+	</footer>
 	
 	<script type="text/javascript" src="{% static 'js/JQuery3.3.1.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>

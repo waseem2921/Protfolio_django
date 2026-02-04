@@ -590,7 +590,7 @@ width: 100%;
 	background-color: rgba(23,209,172,0.80);
 }
 .overlay-text h1,p{
-	color: #FFFFFF;
+	color: #000000;
 }
 .overlay-text h1{
 	font-size: 2.2rem;
@@ -610,14 +610,14 @@ width: 100%;
 	justify-content:center;
 	align-items: center;
 	height: 200px;
-	background-color: #F4F7FF;
+	background-color: #ffffff;
 	margin: 20px 0px;
 	box-sizing: border-box;
 	box-shadow:2px 0px 20px rgba(0,0,0,0.4); 
 }
 .c-b-heading{
 	font-size: 2rem;
-	color:#1E1E1E;
+	color: #ffffff;
 	font-family: calibri;
 	margin: 10px;
 	padding: 5px;
@@ -649,7 +649,7 @@ width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+	color: #ffffff;
 }
 #contact-form form{
 	display: flex;
